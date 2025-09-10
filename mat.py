@@ -89,7 +89,6 @@ with col3:
 if st.button("🔍 Find My Match"):
     # Select the Correct FAISS DB
     target_gender = "Female" if gender == "Bride" else "Male"
-    print(target_gender)
     index_file = male_index_file if target_gender == "Male" else female_index_file
     print(index_file)
     df_profiles = st.session_state.df_male if target_gender == "Male" else st.session_state.df_female
